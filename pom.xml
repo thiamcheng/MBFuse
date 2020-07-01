@@ -36,27 +36,21 @@
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-spring-boot-starter</artifactId>
-      
     </dependency>
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-restlet</artifactId>
-      
     </dependency>
-  
     <dependency>
       <groupId>org.restlet.jee</groupId>
-        <artifactId>org.restlet</artifactId>
-        <version>2.3.12</version>
+      <artifactId>org.restlet</artifactId>
+      <version>2.3.12</version>
     </dependency>
-
-<!-- https://mvnrepository.com/artifact/org.restlet.jee/org.restlet.ext.httpclient -->
-<dependency>
-    <groupId>org.restlet.jee</groupId>
-    <artifactId>org.restlet.ext.httpclient</artifactId>
-    <version>2.3.7</version>
-</dependency>
-
+    <dependency>
+      <groupId>org.restlet.jee</groupId>
+      <artifactId>org.restlet.ext.httpclient</artifactId>
+      <version>2.3.7</version>
+    </dependency>
     <dependency>
       <groupId>org.apache.activemq</groupId>
       <artifactId>activemq-camel</artifactId>
@@ -65,10 +59,8 @@
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-jms-starter</artifactId>
-     
     </dependency>
-    
-       <dependency>
+    <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-jackson</artifactId>
     </dependency>
@@ -76,13 +68,21 @@
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-jacksonxml</artifactId>
     </dependency>
-    
-     <dependency>
+    <dependency>
       <groupId>org.apache.activemq</groupId>
       <artifactId>activemq-pool</artifactId>
       <version>5.3.2</version>
     </dependency>
-    
+    <dependency>
+      <groupId>org.apache.camel</groupId>
+      <artifactId>camel-crypto</artifactId>
+      <version>2.21.0.fuse-760027-redhat-00001</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.camel</groupId>
+      <artifactId>camel-jsonpath</artifactId>
+      <version>2.21.0.fuse-760027-redhat-00001</version>
+    </dependency>
   </dependencies>
   <repositories>
     <repository>
@@ -97,15 +97,11 @@
       <id>jboss-early-access-repository</id>
       <url>https://repository.jboss.org/nexus/content/groups/ea</url>
     </repository>
-      <repository>
+    <repository>
       <id>restlet</id>
       <url>https://maven.restlet.com/</url>
     </repository>
   </repositories>
-  
-
-    
-    
   <pluginRepositories>
     <pluginRepository>
       <id>red-hat-ga-repository</id>
@@ -119,7 +115,6 @@
       <id>jboss-early-access-repository</id>
       <url>https://repository.jboss.org/nexus/content/groups/ea</url>
     </pluginRepository>
-    
   </pluginRepositories>
   <build>
     <defaultGoal>spring-boot:run</defaultGoal>
