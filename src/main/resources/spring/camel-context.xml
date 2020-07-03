@@ -12,19 +12,18 @@
     </bean>
     <camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
         <route id="myone-route">
-            <from id="_to3" uri="activemq:queue:getWaterOrder.req.01?jmsMessageType=Bytes&amp;testConnectionOnStartup=true&amp;exchangePattern=InOnly"/>
+            <from id="_to3" uri="activemq:queue:getWaterOrder.q01.req.01?jmsMessageType=Bytes&amp;testConnectionOnStartup=true&amp;exchangePattern=InOnly"/>
             <log id="route-log" message=">Sending>> ${body}"/>
             <setHeader headerName="Content-Type" id="_setHeader1">
                 <constant>application/json</constant>
             </setHeader>
             <to id="_to1" pattern="InOut" uri="restlet:http://istio-ingressgateway-istio-system.tccluster-sng01-b3c8x32-57124d23d25ef78fd339de58d690b0f5-0000.sng01.containers.appdomain.cloud:80/getWaterOrder?restletMethod=POST&amp;exchangePattern=InOut"/>
-            
             <log id="_log1" message="Received >>> ${body}"/>
             <setHeader headerName="transactionid" id="_setHeader2">
                 <jsonpath>$.Header.transactionId</jsonpath>
             </setHeader>
             <log id="_log2" message="Received header body >>> ${body}"/>
-            <to id="_to2" uri="activemq:queue:getWaterOrder.rpl.01"/>
+            <to id="_to2" uri="activemq:queue:getWaterOrder.q01.rpl.01"/>
         </route>
     </camelContext>
 </beans>
