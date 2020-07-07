@@ -17,7 +17,7 @@
             <setHeader headerName="Content-Type" id="_setHeader1">
                 <constant>application/json</constant>
             </setHeader>
-            <to id="_to1" pattern="InOut" uri="restlet:http://water-order-waterorder:80/getWaterOrder?restletMethod=POST&amp;exchangePattern=InOut"/>
+            <to id="_to1" pattern="InOut" uri="restlet:http://water-order.waterorder:80/getWaterOrder?restletMethod=POST&amp;exchangePattern=InOut"/>
             <log id="_log1" message="Received >>> ${body}"/>
             <setHeader headerName="transactionId" id="_setHeader2">
                 <jsonpath>$.Header.transactionId</jsonpath>
