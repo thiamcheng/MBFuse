@@ -10,6 +10,7 @@
             </bean>
         </property>
     </bean>
+    
     <camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
         <route id="myone-route">
             <from id="_to3" uri="activemq:queue:getWaterOrder.q01.req?jmsMessageType=Bytes&amp;testConnectionOnStartup=true&amp;exchangePattern=InOnly"/>
