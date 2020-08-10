@@ -28,7 +28,13 @@ public class Application {
 
     // must have a main method spring-boot can run
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
-    }
+        String newDate = new Date()
+        try { 
+            SpringApplication.run(Application.class, args);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        
+     }
 
 }
